@@ -41,7 +41,7 @@
             position: fixed;
             top: 20px;
             right: 20px;
-            z-index: 1001;
+            z-index: 999;
             display: flex;
             gap: 8px;
         }
@@ -148,8 +148,8 @@
             color: var(--text-dark);
             font-weight: 700;
             font-size: 14px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            text-transform: capitalize;
+            letter-spacing: 0.5px;
             padding: 12px 20px;
             border-radius: 25px;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -200,7 +200,7 @@
             right: 0;
             bottom: 0;
             background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
-                        url('./adora_images/hotel_exterior.jpg');
+                        url('./images/hotel_exterior.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -211,8 +211,8 @@
             font-size: 5rem;
             font-weight: 800;
             margin-bottom: 1.5rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
+            text-transform: none;
+            letter-spacing: 1px;
             animation: slideUp 1s cubic-bezier(0.4, 0, 0.2, 1);
             text-shadow: 0 4px 20px rgba(0,0,0,0.5);
         }
@@ -299,8 +299,8 @@
             font-weight: 800;
             margin-bottom: 4rem;
             position: relative;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            text-transform: capitalize;
+            letter-spacing: 1px;
             color: var(--text-dark);
         }
 
@@ -331,8 +331,8 @@
             font-weight: 700;
             margin-bottom: 2rem;
             color: var(--primary-color);
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            text-transform: capitalize;
+            letter-spacing: 0.5px;
         }
 
         .hotel-text p {
@@ -421,8 +421,8 @@
             font-weight: 700;
             margin-bottom: 1.5rem;
             color: var(--text-dark);
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            text-transform: capitalize;
+            letter-spacing: 0.5px;
         }
 
         .suite-content p {
@@ -486,8 +486,118 @@
             font-size: 1.5rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            text-transform: capitalize;
+            letter-spacing: 0.5px;
+        }
+
+        /* Activities Section */
+        .activities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .activity-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 3rem 2rem;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .activity-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+        }
+
+        .activity-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .activity-card h4 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            text-transform: capitalize;
+            letter-spacing: 0.5px;
+            color: var(--primary-color);
+        }
+
+        .activity-card p {
+            color: #64748b;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        /* Reviews Section */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .review-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 3rem;
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(0,0,0,0.05);
+            position: relative;
+        }
+
+        .review-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+
+        .review-stars {
+            color: #fbbf24;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .review-card p {
+            color: #64748b;
+            line-height: 1.7;
+            font-style: italic;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .review-author {
+            border-top: 2px solid #e5e7eb;
+            padding-top: 1.5rem;
+        }
+
+        .review-author strong {
+            display: block;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            text-transform: capitalize;
+            letter-spacing: 0.5px;
+        }
+
+        .review-author span {
+            color: #64748b;
+            font-size: 0.9rem;
         }
 
         /* Reservation Section */
@@ -512,8 +622,8 @@
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 2rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            text-transform: capitalize;
+            letter-spacing: 1px;
         }
 
         .form-grid {
@@ -534,8 +644,8 @@
             display: block;
             font-weight: 600;
             margin-bottom: 0.5rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            text-transform: capitalize;
+            letter-spacing: 0.5px;
             font-size: 14px;
         }
 
@@ -614,8 +724,8 @@
             margin-bottom: 3rem;
             font-size: 2.5rem;
             font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            text-transform: capitalize;
+            letter-spacing: 1px;
         }
 
         .contact-item {
@@ -671,8 +781,8 @@
             color: var(--accent-color);
             font-size: 1.5rem;
             font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            text-transform: capitalize;
+            letter-spacing: 0.5px;
         }
 
         .footer-links {
@@ -766,8 +876,8 @@
             font-size: 1.8rem;
             font-weight: 700;
             color: var(--text-dark);
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            text-transform: capitalize;
+            letter-spacing: 0.5px;
         }
 
         .close {
@@ -790,8 +900,8 @@
             font-size: 2rem;
             font-weight: 700;
             margin-bottom: 2rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            text-transform: capitalize;
+            letter-spacing: 1px;
         }
 
         .modal input {
@@ -855,8 +965,8 @@
         .dashboard-header h2 {
             font-size: 2.5rem;
             font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            text-transform: capitalize;
+            letter-spacing: 1px;
             margin-bottom: 0.5rem;
         }
 
@@ -897,8 +1007,8 @@
             font-weight: 700;
             margin-bottom: 1rem;
             color: var(--primary-color);
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            text-transform: capitalize;
+            letter-spacing: 0.5px;
         }
 
         .dashboard-card p {
@@ -935,8 +1045,37 @@
             box-shadow: 0 8px 25px rgba(239, 68, 68, 0.3);
         }
 
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        /* Button Alignment Improvements */
+        .btn, .lang-btn, .login-btn, .reservation-btn, .dashboard-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .nav-menu li a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+
             .nav-menu {
                 display: none;
             }
@@ -977,6 +1116,10 @@
             .modal-content {
                 margin: 2% auto;
                 width: 95%;
+            }
+
+            .video-container iframe {
+                height: 250px;
             }
         }
 
@@ -1031,15 +1174,16 @@
         <nav class="container">
             <div class="logo-section">
                 <div class="logo">ADORA</div>
-                <button class="login-btn" onclick="openLoginModal()">PRIJAVA</button>
+                <button class="login-btn" onclick="openLoginModal()" data-lang-sl="PRIJAVA" data-lang-en="LOGIN">PRIJAVA</button>
             </div>
             <ul class="nav-menu">
-                <li><a href="#home" class="active" data-section="home">DOMOV</a></li>
-                <li><a href="#about" data-section="about">O NAS</a></li>
-                <li><a href="#suites" data-section="suites">SUITE</a></li>
-                <li><a href="#gallery" data-section="gallery">FOTOGALERIJA</a></li>
-                <li><a href="#reservation" data-section="reservation">REZERVACIJA</a></li>
-                <li><a href="#contact" data-section="contact">KONTAKT</a></li>
+                <li><a href="#home" class="active" data-section="home" data-lang-sl="DOMOV" data-lang-en="HOME">DOMOV</a></li>
+                <li><a href="#about" data-section="about" data-lang-sl="O NAS" data-lang-en="ABOUT US">O NAS</a></li>
+                <li><a href="#suites" data-section="suites" data-lang-sl="SUITE" data-lang-en="SUITES">SUITE</a></li>
+                <li><a href="#activities" data-section="activities" data-lang-sl="AKTIVNOSTI" data-lang-en="ACTIVITIES">AKTIVNOSTI</a></li>
+                <li><a href="#gallery" data-section="gallery" data-lang-sl="GALERIJA" data-lang-en="GALLERY">GALERIJA</a></li>
+                <li><a href="#reservation" data-section="reservation" data-lang-sl="REZERVACIJA" data-lang-en="RESERVATION">REZERVACIJA</a></li>
+                <li><a href="#contact" data-section="contact" data-lang-sl="KONTAKT" data-lang-en="CONTACT">KONTAKT</a></li>
             </ul>
         </nav>
     </header>
@@ -1065,13 +1209,13 @@
             <div class="hotel-description">
                 <div class="hotel-text">
                     <h3 data-lang-sl="VILLA ADORA" data-lang-en="VILLA ADORA">VILLA ADORA</h3>
-                    <p data-lang-sl="Villa Adora je edinstven luksuzni hotel na obali čudovitega jezera Bled v Sloveniji. Ponuja popolno kombinacijo naravne lepote, udobja in vrhunske storitve za nepozabno bivanje." data-lang-en="Villa Adora is a unique luxury hotel located on the shore of magnificent Lake Bled in Slovenia. It offers a perfect combination of natural beauty, comfort and top-notch service for an unforgettable stay.">
-                        Villa Adora je edinstven luksuzni hotel na obali čudovitega jezera Bled v Sloveniji. Ponuja popolno kombinacijo naravne lepote, udobja in vrhunske storitve za nepozabno bivanje.
+                    <p data-lang-sl="Villa Adora je edinstven luksuzni hotel na obali čudovitega jezera Bled v Sloveniji. Ponuja popolno kombinacijo naravne lepote, udobja in vrhunske storitve za nepozabno bivanje. Naš kuharski mojster pripravlja izvrstne jedi iz lokalnih sestavin, s poudarkom na tradicionalnih slovenskih jedeh in sodobnih kulinaričnih inovacijah." data-lang-en="Villa Adora is a unique luxury hotel located on the shore of magnificent Lake Bled in Slovenia. It offers a perfect combination of natural beauty, comfort and top-notch service for an unforgettable stay. Our master chef prepares excellent dishes from local ingredients, with emphasis on traditional Slovenian cuisine and modern culinary innovations.">
+                        Villa Adora je edinstven luksuzni hotel na obali čudovitega jezera Bled v Sloveniji. Ponuja popolno kombinacijo naravne lepote, udobja in vrhunske storitve za nepozabno bivanje. Naš kuharski mojster pripravlja izvrstne jedi iz lokalnih sestavin, s poudarkom na tradicionalnih slovenskih jedeh in sodobnih kulinaričnih inovacijah.
                     </p>
                     <a href="#suites" class="btn" data-lang-sl="OGLED SUIT" data-lang-en="VIEW SUITES">OGLED SUIT</a>
                 </div>
                 <div class="hotel-image">
-                    <img src="./adora_images/hotel_interior.jpg" alt="Villa Adora Interior">
+                    <img src="./images/hotel_interior.jpg" alt="Villa Adora Interior">
                 </div>
             </div>
         </div>
@@ -1084,7 +1228,7 @@
             <div class="suites-grid">
                 <div class="suite-card">
                     <div class="suite-image">
-                        <img src="./adora_images/suite_room.jpg" alt="Luxury Suite">
+                        <img src="./images/suite_room.jpg" alt="Luxury Suite">
                     </div>
                     <div class="suite-content">
                         <h4 data-lang-sl="PREMIUM SUITE" data-lang-en="PREMIUM SUITE">PREMIUM SUITE</h4>
@@ -1096,7 +1240,7 @@
                 </div>
                 <div class="suite-card">
                     <div class="suite-image">
-                        <img src="./adora_images/lake_view.jpg" alt="Lake View Suite">
+                        <img src="./images/lake_view.jpg" alt="Lake View Suite">
                     </div>
                     <div class="suite-content">
                         <h4 data-lang-sl="JEZERSKI RAZGLED" data-lang-en="LAKE VIEW">JEZERSKI RAZGLED</h4>
@@ -1110,33 +1254,141 @@
         </div>
     </section>
 
+    <!-- Activities Section -->
+    <section id="activities">
+        <div class="container">
+            <h2 class="section-title" data-lang-sl="AKTIVNOSTI IN DOŽIVETJA" data-lang-en="ACTIVITIES & EXPERIENCES">AKTIVNOSTI IN DOŽIVETJA</h2>
+            <div class="activities-grid">
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h4 data-lang-sl="JEZERSKE AKTIVNOSTI" data-lang-en="LAKE ACTIVITIES">JEZERSKE AKTIVNOSTI</h4>
+                    <p data-lang-sl="Pustolovščine na jezeru Bled: vožnja s čolnom do otoka, kajak, sup, ribolov in piknik na vodi." data-lang-en="Lake Bled adventures: rowing to the island, kayaking, stand-up paddleboarding, fishing and lakeside picnics.">
+                        Pustolovščine na jezeru Bled: vožnja s čolnom do otoka, kajak, sup, ribolov in piknik na vodi.
+                    </p>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <h4 data-lang-sl="GORSKE POHODI" data-lang-en="MOUNTAIN HIKING">GORSKE POHODI</h4>
+                    <p data-lang-sl="Raziskujte čudovite gorske poti okoli Bleda. Obiščite Ojstrico, planinske koče in uživajte v spektakularnih razgledih." data-lang-en="Explore the magnificent mountain trails around Bled. Visit Ojstrica, mountain huts and enjoy spectacular panoramic views.">
+                        Raziskujte čudovite gorske poti okoli Bleda. Obiščite Ojstrico, planinske koče in uživajte v spektakularnih razgledih.
+                    </p>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h4 data-lang-sl="KULINARIČNE DOŽIVETJE" data-lang-en="CULINARY EXPERIENCES">KULINARIČNE DOŽIVETJE</h4>
+                    <p data-lang-sl="Okusite lokalne specialitete v našem hotelu ali obiščite tradicionalne gostilne. Uživajte v kremni rezini in lokalnih vinih." data-lang-en="Taste local specialties at our hotel or visit traditional restaurants. Enjoy cream cake and local wines.">
+                        Okusite lokalne specialitete v našem hotelu ali obiščite tradicionalne gostilne. Uživajte v kremni rezini in lokalnih vinih.
+                    </p>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h4 data-lang-sl="SPA IN RELAKSACIJA" data-lang-en="SPA & RELAXATION">SPA IN RELAKSACIJA</h4>
+                    <p data-lang-sl="Sprostite se v našem luksuznem wellness centru z masažami, savno in pogledom na jezero." data-lang-en="Relax in our luxury wellness center with massages, sauna and lake views.">
+                        Sprostite se v našem luksuznem wellness centru z masažami, savno in pogledom na jezero.
+                    </p>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <i class="fas fa-bicycle"></i>
+                    </div>
+                    <h4 data-lang-sl="KOLESARSKE POTI" data-lang-en="BIKE TRAILS">KOLESARSKE POTI</h4>
+                    <p data-lang-sl="Najemite kolo in raziskujte okolico po urejenih kolesarskih poteh ob jezeru in skozi gozdove." data-lang-en="Rent a bike and explore the surroundings on well-maintained cycling paths along the lake and through forests.">
+                        Najemite kolo in raziskujte okolico po urejenih kolesarskih poteh ob jezeru in skozi gozdove.
+                    </p>
+                </div>
+                <div class="activity-card">
+                    <div class="activity-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h4 data-lang-sl="FOTO LOKACIJE" data-lang-en="PHOTO LOCATIONS">FOTO LOKACIJE</h4>
+                    <p data-lang-sl="Bled ponuja spektakularne fotografske priložnosti: Blejski otok, grad Bled, Triglav in čudovite sončne zahode." data-lang-en="Bled offers spectacular photography opportunities: Bled Island, Bled Castle, Triglav and beautiful sunsets.">
+                        Bled ponuja spektakularne fotografske priložnosti: Blejski otok, grad Bled, Triglav in čudovite sončne zahode.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Photo Gallery -->
     <section id="gallery">
         <div class="container">
             <h2 class="section-title" data-lang-sl="FOTOGALERIJA" data-lang-en="PHOTO GALLERY">FOTOGALERIJA</h2>
             <div class="gallery">
                 <div class="gallery-item">
-                    <img src="./adora_images/hotel_exterior.jpg" alt="Hotel Exterior">
+                    <img src="./images/hotel_exterior.jpg" alt="Hotel Exterior">
                     <div class="overlay">
                         <h4 data-lang-sl="ZUNANJOST HOTELA" data-lang-en="HOTEL EXTERIOR">ZUNANJOST HOTELA</h4>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="./adora_images/hotel_interior.jpg" alt="Hotel Interior">
+                    <img src="./images/hotel_interior.jpg" alt="Hotel Interior">
                     <div class="overlay">
                         <h4 data-lang-sl="NOTRANJOST HOTELA" data-lang-en="HOTEL INTERIOR">NOTRANJOST HOTELA</h4>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="./adora_images/suite_room.jpg" alt="Suite Room">
+                    <img src="./images/suite_room.jpg" alt="Suite Room">
                     <div class="overlay">
                         <h4 data-lang-sl="LUKSUZNA SOBA" data-lang-en="LUXURY ROOM">LUKSUZNA SOBA</h4>
                     </div>
                 </div>
                 <div class="gallery-item">
-                    <img src="./adora_images/lake_view.jpg" alt="Lake View">
+                    <img src="./images/lake_view.jpg" alt="Lake View">
                     <div class="overlay">
                         <h4 data-lang-sl="RAZGLED NA JEZERO" data-lang-en="LAKE VIEW">RAZGLED NA JEZERO</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guest Reviews Section -->
+    <section id="reviews">
+        <div class="container">
+            <h2 class="section-title" data-lang-sl="MNEKI GOSTOV" data-lang-en="GUEST REVIEWS">MNEKI GOSTOV</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">
+                        ★★★★★
+                    </div>
+                    <p data-lang-sl="Villa Adora je popoln kraj za sprostitev. Luksuzne suite, čudovita lokacija ob jezeru in izjemna storitev. Priporočam vsem, ki iščejo popoln oddih!" data-lang-en="Villa Adora is the perfect place to relax. Luxurious suites, beautiful location by the lake and exceptional service. I recommend it to anyone looking for the perfect getaway!">
+                        Villa Adora je popoln kraj za sprostitev. Luksuzne suite, čudovita lokacija ob jezeru in izjemna storitev. Priporočam vsem, ki iščejo popoln oddih!
+                    </p>
+                    <div class="review-author">
+                        <strong data-lang-sl="Ana Kovač" data-lang-en="Ana Kovac">Ana Kovač</strong>
+                        <span data-lang-sl="Ljubljana, Slovenija" data-lang-en="Ljubljana, Slovenia">Ljubljana, Slovenija</span>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">
+                        ★★★★★
+                    </div>
+                    <p data-lang-sl="Neverjetna izkušnja! Hrana je bila izvrstna, še posebej večerja v restavraciji. Pogledi na jezero so dih jemajoči. Definitivno se bomo vrnili!" data-lang-en="Incredible experience! The food was excellent, especially the dinner at the restaurant. The views of the lake are breathtaking. We will definitely return!">
+                        Neverjetna izkušnja! Hrana je bila izvrstna, še posebej večerja v restavraciji. Pogledi na jezero so dih jemajoči. Definitivno se bomo vrnili!
+                    </p>
+                    <div class="review-author">
+                        <strong data-lang-sl="Mark Johnson" data-lang-en="Mark Johnson">Mark Johnson</strong>
+                        <span data-lang-sl="London, Velika Britanija" data-lang-en="London, UK">London, Velika Britanija</span>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">
+                        ★★★★★
+                    </div>
+                    <p data-lang-sl="Popolna destinacija za poroko! Naš posebni dan je bil še posebej čaroben s pogledom na Blejski otok. Profesionalna ekipa in pozornost do detajlov." data-lang-en="Perfect destination for a wedding! Our special day was even more magical with views of Bled Island. Professional team and attention to detail.">
+                        Popolna destinacija za poroko! Naš posebni dan je bil še posebej čaroben s pogledom na Blejski otok. Profesionalna ekipa in pozornost do detajlov.
+                    </p>
+                    <div class="review-author">
+                        <strong data-lang-sl="Sara Novak" data-lang-en="Sara Novak">Sara Novak</strong>
+                        <span data-lang-sl="Maribor, Slovenija" data-lang-en="Maribor, Slovenia">Maribor, Slovenija</span>
                     </div>
                 </div>
             </div>
@@ -1152,19 +1404,19 @@
                     <div class="form-grid">
                         <div class="form-group">
                             <label data-lang-sl="IME" data-lang-en="FIRST NAME">IME</label>
-                            <input type="text" name="firstName" required placeholder="Vnesite ime">
+                            <input type="text" name="firstName" required placeholder="Vnesite ime" data-lang-sl="Vnesite ime" data-lang-en="Enter first name">
                         </div>
                         <div class="form-group">
                             <label data-lang-sl="PRIIMEK" data-lang-en="LAST NAME">PRIIMEK</label>
-                            <input type="text" name="lastName" required placeholder="Vnesite priimek">
+                            <input type="text" name="lastName" required placeholder="Vnesite priimek" data-lang-sl="Vnesite priimek" data-lang-en="Enter last name">
                         </div>
                         <div class="form-group">
                             <label data-lang-sl="E-POŠTA" data-lang-en="EMAIL">E-POŠTA</label>
-                            <input type="email" name="email" required placeholder="Vnesite e-pošto">
+                            <input type="email" name="email" required placeholder="Vnesite e-pošto" data-lang-sl="Vnesite e-pošto" data-lang-en="Enter email">
                         </div>
                         <div class="form-group">
                             <label data-lang-sl="TELEFON" data-lang-en="PHONE">TELEFON</label>
-                            <input type="tel" name="phone" required placeholder="Vnesite telefon">
+                            <input type="tel" name="phone" required placeholder="Vnesite telefon" data-lang-sl="Vnesite telefon" data-lang-en="Enter phone number">
                         </div>
                         <div class="form-group">
                             <label data-lang-sl="DATUM PRIHODA" data-lang-en="CHECK-IN DATE">DATUM PRIHODA</label>
@@ -1177,7 +1429,7 @@
                         <div class="form-group">
                             <label data-lang-sl="ŠTEVILO ODRASLIH" data-lang-en="NUMBER OF ADULTS">ŠTEVILO ODRASLIH</label>
                             <select name="adults" required>
-                                <option value="">Izberite</option>
+                                <option value="" data-lang-sl="Izberite" data-lang-en="Select">Izberite</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -1187,7 +1439,7 @@
                         <div class="form-group">
                             <label data-lang-sl="TIP SOBE" data-lang-en="ROOM TYPE">TIP SOBE</label>
                             <select name="roomType" required>
-                                <option value="">Izberite tip sobe</option>
+                                <option value="" data-lang-sl="Izberite tip sobe" data-lang-en="Select room type">Izberite tip sobe</option>
                                 <option value="premium">Premium Suite</option>
                                 <option value="lakeview">Lake View Suite</option>
                                 <option value="deluxe">Deluxe Room</option>
@@ -1195,7 +1447,7 @@
                         </div>
                         <div class="form-group full-width">
                             <label data-lang-sl="POSEBNA ZAHTEVKA" data-lang-en="SPECIAL REQUESTS">POSEBNA ZAHTEVKA</label>
-                            <textarea name="requests" placeholder="Vnesite morebitne posebne zahtevke..."></textarea>
+                            <textarea name="requests" placeholder="Vnesite morebitne posebne zahtevke..." data-lang-sl="Vnesite morebitne posebne zahtevke..." data-lang-en="Enter any special requests..."></textarea>
                         </div>
                     </div>
                     <button type="submit" class="reservation-btn" data-lang-sl="POŠLJI REZERVACIJO" data-lang-en="SUBMIT RESERVATION">POŠLJI REZERVACIJO</button>
@@ -1236,7 +1488,7 @@
                 </div>
                 <div class="map-container">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4765278b6c8b8b8b%3A0x8b8b8b8b8b8b8b8b!2sVilla%20Adora!5e0!3m2!1sen!2ssi!4v1694738400000!5m2!1sen!2ssi"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2753.789!2d14.1145!3d46.3683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47652b8b8b8b8b8b%3A0x8b8b8b8b8b8b8b8b!2zQmxlZCwgU2xvdmVuaWE!5e0!3m2!1sen!2ssi!4v1694738400000!5m2!1sen!2ssi&q=Villa+Adora+Lake+Bled"
                         width="100%"
                         height="400"
                         style="border:0;"
@@ -1258,6 +1510,7 @@
                         <li><a href="#home" data-lang-sl="DOMOV" data-lang-en="HOME">DOMOV</a></li>
                         <li><a href="#about" data-lang-sl="O NAS" data-lang-en="ABOUT">O NAS</a></li>
                         <li><a href="#suites" data-lang-sl="SUITE" data-lang-en="SUITES">SUITE</a></li>
+                        <li><a href="#activities" data-lang-sl="AKTIVNOSTI" data-lang-en="ACTIVITIES">AKTIVNOSTI</a></li>
                         <li><a href="#gallery" data-lang-sl="GALERIJA" data-lang-en="GALLERY">GALERIJA</a></li>
                         <li><a href="#contact" data-lang-sl="KONTAKT" data-lang-en="CONTACT">KONTAKT</a></li>
                     </ul>
@@ -1362,6 +1615,8 @@
                 const text = element.getAttribute('data-lang-' + lang);
                 if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
                     element.placeholder = text;
+                } else if (element.tagName === 'OPTION') {
+                    element.textContent = text;
                 } else {
                     element.textContent = text;
                 }
